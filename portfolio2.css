@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 9%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#00adb5;
+}
+
+nav a{
+    color:white;
+    margin-left:30px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00adb5;
+}
+
+/* Sections */
+
+section{
+    min-height:100vh;
+    padding:100px 9%;
+}
+
+/* Home */
+
+.home{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+}
+
+.home-img img{
+    width:340px;
+    height:500px;
+    object-fit:cover;
+    border-radius:30px;
+    border:5px solid #00adb5;
+    box-shadow:0 0 25px #00adb5;
+
+    animation:float 3s ease-in-out infinite;
+
+    transition:0.4s;
+    .home-img img{
+    transition:0.4s ease;
+}
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.home-content h1{
+    font-size:55px;
+    max-width: 800px;
+}
+
+.home-content h3{
+    font-size:32px;
+    margin:10px 0;
+}
+
+span{
+    color:#00adb5;
+}
+
+.home-content p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* Social Icons */
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    border:2px solid #00adb5;
+    border-radius:50%;
+    margin:20px 10px 20px 0;
+    color:#00adb5;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#00adb5;
+    color:black;
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #00adb5;
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    border-radius:30px;
+    border:2px solid #00adb5;
+    color:#00adb5;
+    font-size:16px;
+    transition:0.3s;
+    background:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#00adb5;
+    color:black;
+    box-shadow:0 0 25px #00adb5;
+}
+
+/* Heading */
+
+.heading{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* About */
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    font-size:25px;
+    line-height:1.8;
+    color: #00adb5;
+}
+
+/* Skills */
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.skills-card{
+    width:300px;
+    padding:30px;
+    background:#1e1e1e;
+    border-radius:15px;
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+.skills-card:hover{
+    transform:translateY(-10px);
+    border-color:#00adb5;
+    box-shadow:0 0 20px #00adb5;
+}
+
+.skills-card h3{
+    font-size:28px;
+    margin-bottom:20px;
+    color:#00adb5;
+    text-align:center;
+}
+
+.skills-card ul{
+    list-style:none;
+}
+
+.skills-card ul li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    font-size:18px;
+    transition:0.3s;
+}
+
+.skills-card ul li:hover{
+    padding-left:10px;
+    color:#00adb5;
+}
+
+/* Light Mode Support */
+
+.light-mode .skills-card{
+    background:white;
+    color:#111;
+}
+
+.light-mode .skills-card ul li{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+/* =========================
+   DARK MODE MENU TEXT
+========================= */
+
+nav a{
+    color:white;
+}
+/* Menu Icon Colors */
+
+#menu-icon{
+    color:white;
+}
+
+.light-mode #menu-icon{
+    color:#111;
+}
+/* Projects */
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.project-box{
+    background:#1e1e1e;
+    padding:30px;
+    border-radius:15px;
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+.project-box:hover{
+    transform:translateY(-10px);
+    border-color:#00adb5;
+    box-shadow:0 0 20px #00adb5;
+}
+
+.project-box h3{
+    font-size:26px;
+    margin-bottom:15px;
+    color:#00adb5;
+}
+
+.project-box p{
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* Light Mode */
+
+.light-mode .project-box{
+    background:white;
+    color:#111;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Contact */
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+form input,
+form textarea{
+    padding:15px;
+    border-radius:10px;
+    border:none;
+    background:#1e1e1e;
+    color:white;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+    .home{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .home-img img{
+        width:250px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        margin:10px;
+    }
+}
+/* Main Animated Text */
+
+.animate-text{
+    font: size 100%;;
+    font-weight:500;
+
+}
+.animate-text span{
+    align-items: center;
+gap: 15px;
+    color: #00adb5;
+    display: flex;
+    overflow:hidden;
+    white-space:nowrap;
+    width:0;
+    animation:
+    typingName 4s steps(20,end) forwards,
+    blink 0.8s infinite;
+}
+
+/* Name Color */
+
+.animate-text span{
+    color:#00adb5;
+}
+
+/* Typing Animation */
+
+@keyframes typingName{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+}
+
+/* Cursor Blink */
+
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+}
+
+/* Second Text Animation */
+
+.typing-text{
+    margin-top:20px;
+    font-size:35px;
+    opacity:0;
+    animation:fadeIn 2s ease forwards;
+    animation-delay:4s;
+    color: #00adb5;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.typing-text{
+    font-size: 35px;
+    margin-top: 20px;
+    color: white;
+}
+/* =========================
+   LIGHT & DARK MODE
+========================= */
+
+.light-mode{
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-mode header{
+    background:rgba(255,255,255,0.8);
+}
+
+.light-mode nav a{
+    color:#111;
+}
+
+.light-mode .project-box,
+.light-mode .skill-box,
+.light-mode form input,
+.light-mode form textarea{
+    background:white;
+    color:#111;
+}
+
+.light-mode footer{
+    background:#ddd;
+    color:#111;
+}
+/* =========================
+   LIGHT MODE MOBILE MENU
+========================= */
+
+.light-mode nav{
+    background:white;
+}
+
+.light-mode nav a{
+    color:#111;
+}
+
+.light-mode #menu-icon{
+    color:#111;
+}
+
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+#menu-icon{
+    font-size:28px;
+    color:white;
+    display:none;
+    cursor:pointer;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    #menu-icon{
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        right:-100%;
+        width:250px;
+
+        background:#1e1e1e;
+
+        display:flex;
+        flex-direction:column;
+
+        padding:20px;
+
+        transition:0.4s;
+
+        border-radius:10px;
+
+        box-shadow:0 0 20px rgba(0,0,0,0.4);
+    }
+nav{
+    align-items:center;
+}
+    nav.active{
+        right:20px;
+    }
+
+    nav a{
+        margin:15px 0;
+    }
+
+}
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+
+#theme-toggle{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#00adb5;
+
+    color:black;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    margin-left:15px;
+    backdrop-filter:blur(10px);
+}
+
+/* Hover Effect */
+
+#theme-toggle:hover{
+    transform:scale(1.1) rotate(10deg);
+    box-shadow:0 0 20px #00adb5;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    #theme-toggle{
+        width:42px;
+        height:42px;
+
+        font-size:16px;
+
+        margin-top:15px;
+    }
+}
+/* =========================
+   LIGHT MODE IMAGE HOVER
+========================= */
+
+.light-mode .home-img img:hover{
+
+    box-shadow:
+    0 0 15px rgba(0,173,181,0.5),
+    0 10px 30px rgba(0,0,0,0.2);
+
+}
+/* =========================
+   NAVBAR
+========================= */
+
+nav a{
+
+    color:white;
+
+    margin-left:30px;
+
+    font-size:18px;
+
+    transition:0.3s;
+
+    position:relative;
+}
+
+/* Hover Effect */
+
+nav a:hover{
+
+    color:#00adb5;
+}
+
+/* Underline Animation */
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-5px;
+
+    width:0%;
+    height:2px;
+
+    background:#00adb5;
+
+    transition:0.3s;
+}
+
+nav a:hover::after{
+
+    width:100%;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode nav a{
+
+    color:#111;
+}
+
+/* Light Mode Hover */
+
+.light-mode nav a:hover{
+
+    color:#00adb5;
+}
+
+.light-mode nav a::after{
+
+    background:#00adb5;
+}
